@@ -1,5 +1,5 @@
-const { GetPeopleData, GetBmi, GetBmiDetails } = require('../../src/helper/util')
-const constants = require('../../src/helper/constants');
+const { GetPeopleData, GetBmi, GetBmiDetails } = require('../../helper/util')
+const constants = require('../../helper/constants');
 const assert = require('assert');
 
 const input = [{"Gender": "Male", "HeightCm": 171, "WeightKg": 96 },  {"Gender": "Female",
