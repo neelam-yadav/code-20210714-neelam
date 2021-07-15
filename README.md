@@ -40,11 +40,13 @@ https://www.jenkins.io/doc/book/installing/docker/
 Follow below steps to run the pipeline on Jenkins:
 
 
-1. Install NodeJS plugin. Configure it going to Manage Jenkins --> Global Tool Configuration --> NodeJS.
+1. Install NodeJS plugin. Configure it:
    
-    a. Specify name as NodeJs.
+   a. Go to Manage Jenkins --> Global Tool Configuration --> NodeJS.
    
-    b. Click on *Save*.
+    b. Specify name as NodeJs.
+   
+    c. Click on *Save*.
 
 2. Add docker registry credentials in Jenkins with ID **dockerhub**
 
