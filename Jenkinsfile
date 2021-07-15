@@ -56,6 +56,7 @@ pipeline {
 		stage('Cleaning Up') {
 			steps{
 			  sh "docker rmi --force $registry:bmi-$BUILD_NUMBER"
+			  sh 'rm node_modules -rf'
 			}
 		}
 	}
