@@ -50,7 +50,7 @@ Follow below steps to run the pipeline on Jenkins:
 
 2. Add docker registry credentials in Jenkins with ID **dockerhub**
 
-3. Change the environemnt variable: registry value as per your dockerhub username and repository name.
+3. Change the environment variable: registry value as per your dockerhub username and repository name.
    
 4. Create a pipeline
 
