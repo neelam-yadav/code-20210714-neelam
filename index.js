@@ -8,7 +8,7 @@ const util = require('./helper/util');
 
 let peopleData;
 const inputPath = 'data.json'
-const outputPath = 'output-data.json'
+const outputPath = 'output/output-data.json'
 
 const readStream = fs.createReadStream(inputPath);
 const writeStream = fs.createWriteStream(outputPath, {
