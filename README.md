@@ -34,14 +34,16 @@ npm test
 ```
 
 # Jenkins Pipeline
-Jenkins should have docker installed. If using image then refer below:
+Jenkins should have docker installed. If using docker image then refer below:
 https://www.jenkins.io/doc/book/installing/docker/
 
 Follow below steps to run the pipeline on Jenkins:
 
 
 1. Install NodeJS plugin. Configure it going to Manage Jenkins --> Global Tool Configuration --> NodeJS.
+   
     a. Specify name as NodeJs.
+   
     b. Click on *Save*.
 
 2. Add docker registry credentials in Jenkins with ID **dockerhub**
