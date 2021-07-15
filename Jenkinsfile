@@ -19,25 +19,30 @@ pipeline {
 		  steps {
 			sh 'npm install'
 			sh 'node index.js'
+			sh 'npm pack'
 		  }
 		}
-
 
 		stage('Test') {
 		  steps {
-			sh 'npm run test'
+			sh 'npm test'
 		  }
+		  post {
+              always {
+                junit 'test-reports.xml'
+              }
+            }
 		}
 
-		stage('Building Docker Image') {
+		stage('Build: Docker Image') {
 			steps {
 				script {
-					dockerImage = docker.build registry + ":$BUILD_NUMBER"
+					dockerImage = docker.build registry + ":bmi-$BUILD_NUMBER"
 				}
 			}
 		}
 
-		stage('Deploying Docker Image to Dockerhub') {
+		stage('Deploy: Docker Image to Dockerhub') {
 			steps {
 				script {
 					docker.withRegistry('', registryCredential) {
@@ -49,7 +54,7 @@ pipeline {
 
 		stage('Cleaning Up') {
 			steps{
-			  sh "docker rmi --force $registry:$BUILD_NUMBER"
+			  sh "docker rmi --force $registry:bmi-$BUILD_NUMBER"
 			}
 		}
 	}
