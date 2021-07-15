@@ -15,7 +15,7 @@ describe('GetPeopleData', () => {
 
 describe('GetBmi', () => {
     it('it should return 32.83', () => {
-        let bmi = GetBmi(171, 96);
+        let bmi = GetBmi(170, 96);
         assert.strictEqual(bmi, 32.83);
     });
 
