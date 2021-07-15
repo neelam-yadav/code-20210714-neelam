@@ -29,6 +29,7 @@ pipeline {
 		  }
 		  post {
               always {
+                archiveArtifacts artifacts: '*.tgz', fingerprint: true
                 junit skipPublishingChecks: true, testResults: 'test-reports.xml'
               }
             }
