@@ -43,7 +43,7 @@ pipeline {
 			}
 		}
 
-		stage('Deploy: Docker Image to Dockerhub') {
+		stage('Deploy: over Dockerhub') {
 			steps {
 				script {
 					docker.withRegistry('', registryCredential) {
