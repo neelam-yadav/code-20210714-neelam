@@ -3,7 +3,7 @@ pipeline {
 
 	tools {nodejs "NodeJS"}
 	environment {
-		registry = "neelamyadav10053/my-images"
+		registry = "<username>/<repo-name>"
 		registryCredential = 'dockerhub'
 		dockerImage = ''
 	}
