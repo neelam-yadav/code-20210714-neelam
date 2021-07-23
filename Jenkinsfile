@@ -11,7 +11,7 @@ pipeline {
 
 		stage('Checkout') {
 		  steps {
-			git 'https://github.com/neelam-yadav/code-20210714-neelam.git'
+			git 'https://github.com/neelam-yadav/sample-nodejs-devops.git'
 		  }
 		}
 
